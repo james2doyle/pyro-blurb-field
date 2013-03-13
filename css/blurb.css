@@ -1,0 +1,30 @@
+.blurb-list.ui-sortable {
+  overflow: auto;
+}
+
+.blurb-list li {
+  padding: 10px;
+  float: left;
+  border-radius: 3px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.blurb-list li:hover {
+  background: #fafafa;
+}
+
+.blurb-list textarea {
+    width: 95%;
+  }
+
+.blurb-list label {
+  width: 100%;
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .blurb-list li {
+    width: 47%;
+  }
+}
