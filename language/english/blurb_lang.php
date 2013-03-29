@@ -9,4 +9,5 @@ $lang['streams:blurb.folder_choice_instr'] = "Choose a folder for the images you
 $lang['streams:blurb.title_label'] = "Title";
 $lang['streams:blurb.image_label'] = "Image";
 $lang['streams:blurb.body_label'] = "Body";
+$lang['streams:blurb.action_label'] = 'URL';
 $lang['streams:blurb.need_folder'] = "You must choose a folder";
