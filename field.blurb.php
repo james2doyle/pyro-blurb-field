@@ -73,8 +73,8 @@ class Field_blurb
 			$output[] = array(
 				'id' => ($i+1),
 				'title' => isset($input[$i]['title']) ? $input[$i]['title'] : '',
-				'image' => isset($input[$i]['image'] ? $input[$i]['image'] : '',
-				'body' => isset($input[$i]['body'] ? $input[$i]['body'] : '',
+				'image' => isset($input[$i]['image']) ? $input[$i]['image'] : '',
+				'body' => isset($input[$i]['body']) ? $input[$i]['body'] : '',
                 'action' => isset($input[$i]['action']) ? $input[$i]['action'] : ''
 				);
 		}
