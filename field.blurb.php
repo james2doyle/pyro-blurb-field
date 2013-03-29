@@ -48,7 +48,7 @@ class Field_blurb
 		}
 		$template = '<ul class="blurb-list" id="'.$data['form_slug'].'">';
 		for ($i=0; $i < $amount; $i++) {
-			$template .= '<li><label>'.lang('streams:blurb.title_label').' '.($i+1).'</label><input type="text" name="'.$data['form_slug'].'['.$i.'][title]" value="'.$output[$i]['title'].'"><label>'.lang('streams:blurb.image_label').' '.($i+1).'</label>'.form_dropdown($data['form_slug']."[".$i."][image]",array(0 => 'None')+$imagearray, $output[$i]['image']).'<label>'.lang('streams:blurb.body_label').' '.($i+1).'</label><textarea name="'.$data['form_slug'].'['.$i.'][body]" cols="35" rows="10">'.$output[$i]['body'].'</textarea></li>';
+			$template .= '<li><label>'.lang('streams:blurb.title_label').' '.($i+1).'</label><input type="text" name="'.$data['form_slug'].'['.$i.'][title]" value="'.$output[$i]['title'].'"><label>'.lang('streams:blurb.image_label').' '.($i+1).'</label>'.form_dropdown($data['form_slug']."[".$i."][image]",array(0 => 'None')+$imagearray, $output[$i]['image']).'<label>'.lang('streams:blurb.body_label').' '.($i+1).'</label><textarea name="'.$data['form_slug'].'['.$i.'][body]" cols="35" rows="10">'.$output[$i]['body'].'</textarea><label>'.lang('streams:blurb.action_label').' '.($i+1).'</label><input type="text" name="'.$data['form_slug'].'['.$i.'][action]" value="'.$output[$i]['action'].'"></li>';
 		}
 		return $template.'</ul>';
 	}
@@ -74,7 +74,8 @@ class Field_blurb
 				'id' => ($i+1),
 				'title' => $input[$i]['title'],
 				'image' => $input[$i]['image'],
-				'body' => $input[$i]['body']
+				'body' => $input[$i]['body'],
+                'action' => $input[$i]['action']
 				);
 		}
 		return $output;
