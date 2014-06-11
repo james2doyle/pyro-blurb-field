@@ -12,7 +12,7 @@ class Field_blurb
 {
 	public $field_type_slug    = 'blurb';
 	public $db_col_type        = 'text';
-	public $version            = '1.0.0';
+	public $version            = '1.1.0';
 	public $custom_parameters		= array('amount', 'folder_choice', 'use_markdown');
 	public $author             = array(
     'name'=>'James Doyle',
