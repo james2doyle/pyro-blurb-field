@@ -3,9 +3,9 @@ pyro-blurb-field
 
 Create small sections with title, image, and body content.
 
-![blurb field creation](http://ohdoylerules.com/wp-content/uploads/2013/03/Screen-Shot-2013-03-13-at-3.38.39-PM.png)
+![blurb field creation](https://raw.githubusercontent.com/james2doyle/pyro-blurb-field/master/create.png)
 
-![blurb field on page form](http://ohdoylerules.com/wp-content/uploads/2013/03/Screen-Shot-2013-03-13-at-3.38.21-PM.png)
+![blurb field on page form](https://raw.githubusercontent.com/james2doyle/pyro-blurb-field/master/field.png)
 
 Features
 --------
@@ -15,6 +15,7 @@ Features
 * Add a title, image and body for each item
 * Looping tags to output data
 * Includes 0 => None option to allow no image to be set
+* Parse the body with Markdown
 
 Usage
 -----
@@ -27,7 +28,10 @@ Usage
   {{ if image !== 0 }}
   <img src="{{ files:image_url id=image }}">
   {{ endif }}
-  <p>{{ body }}</p>
+  <!-- if use_markdown is checked we get html here -->
+  {{ body }}
+  <!-- output the url we used -->
+  <a href="{{ link }}">READ MORE</a>
 </fieldset>
 {{ /my_field_slug }}
 ```
@@ -39,16 +43,19 @@ If there was 3 items, this would output:
   <legend>Item1</legend>
   <img src="http://website.com/files/large/crazyid.jpg">
   <p>Body Content for 1</p>
+  <a href="http://example.com">READ MORE</a>
 </fieldset>
 <fieldset id="item2">
   <legend>Item2</legend>
   <img src="http://website.com/files/large/crazyid.jpg">
   <p>Body Content for 2</p>
+  <a href="http://example.com">READ MORE</a>
 </fieldset>
 <fieldset id="item3">
   <legend>Item3</legend>
   <img src="http://website.com/files/large/crazyid.jpg">
   <p>Body Content for 3</p>
+  <a href="http://example.com">READ MORE</a>
 </fieldset>
 ```
 
@@ -56,14 +63,13 @@ To Do
 -----
 
 * Add sorting/ordering
-* WYSIWYG Toggle
 
 License
 -------
 
 (The MIT License)
 
-Copyright (c) 2013 James Doyle <james2doyle@gmail.com>
+Copyright (c) 2014 James Doyle <james2doyle@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

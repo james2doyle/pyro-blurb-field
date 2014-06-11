@@ -14,7 +14,8 @@
   background: #fafafa;
 }
 
-.blurb-list textarea {
+.blurb-list textarea,
+.blurb-list input {
     width: 95%;
   }
 
